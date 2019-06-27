@@ -12,8 +12,8 @@ import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
 import Navbar from './Navbar';
 class MyForm extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -34,41 +34,41 @@ render(){
     <form onSubmit={this.handleSubmit}>
 
 
-    <h1 align="center"> Data Creation Page</h1>
-      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '10vh'}}>
+    <h1 align="center"> Team Details</h1>
+      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '5vh'}}>
         <TextField
           name="teamname"
           label="TeamName"
         />
       </div>
-      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '10vh'}}>
+      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '5vh'}}>
         <TextField
         name="tags"
         label="Workstream Tags"
         />
       </div>
-      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '10vh'}}>
+      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '5vh'}}>
         <TextField
         name="teamdl"
         label="TeamDL"
         />
       </div>
-      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '10vh'}}>
+      <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '5vh'}}>
         <TextField
         name="description"
         label="Your Team Description"
         />
       </div>
       <div style={{ textAlign:'center' ,justifyContent:'center', alignItems:'center', width:'60%' }}>
-        <p>
 
-        Inflow teams : Data/work From
-
-        </p>
       </div>
       <div style={{ textAlign:'center' ,justifyContent:'center', alignItems:'center', width:'100%' }}>
       <div style={{ textAlign:'center' ,justifyContent:'center', alignItems:'center', width:'60%' ,margin:'0 20%'}}>
+      <p><b>
 
+      Inflow teams : Data/work From
+      </b>
+      </p>
       <Table  alignItems="center" border="2" >
 
       <TableHead>
@@ -222,9 +222,9 @@ render(){
 <div style={{ textAlign:'center', justifyContent:'center', alignItems:'center' ,width:'100%'}}>
 <div style={{ textAlign:'center' ,justifyContent:'center', alignItems:'center', width:'60%' ,margin:'0 20%'}}>
 <p>
-
+<b>
 Outflow teams : Data/work To
-
+</b>
 </p>
 
       <Table   border="2">
@@ -372,6 +372,7 @@ Outflow teams : Data/work To
       </Table>
       </div>
       </div>
+      <br></br>
       <div  style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
         <Button variant="contained" color="primary" stype="submit" >
           Submit
