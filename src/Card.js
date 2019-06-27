@@ -25,16 +25,18 @@ function MediaCard(props) {
       <CardActionArea>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Team X
+            {props.cardValues.TeamName}
           </Typography>
           <Typography component="p">
-            Details of Team X
+            {props.cardValues.DL}
+            <br/>
+            {props.cardValues.Description}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          Share
+          CHAT BOT
         </Button>
         <Button size="small" color="primary">
           Learn More
