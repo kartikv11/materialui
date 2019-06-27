@@ -8,9 +8,11 @@ const NavBar = () => {
     return(
         <div>
         <AppBar position="static">
-            <Toolbar >
-                <b>JPMC Reachout</b>
-            </Toolbar>
+            <div style={{display: 'flex', flexDirection: 'row'}}>
+                <Toolbar >
+                    <b>JPMC Reachout</b>
+                </Toolbar>
+            </div>
         </AppBar>
         </div>
     )

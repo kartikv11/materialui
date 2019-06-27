@@ -1,13 +1,14 @@
 // App.js
 
 import React, { Component } from 'react';
-import Bookmarks from '@material-ui/icons/Bookmarks';
+import { Redirect } from 'react-router-dom';
 
 import Navbar from './Navbar';
 import Search from './Search';
 import MediaCard from './Card';
 import Divider from '@material-ui/core/Divider';
 import Toolbar from '@material-ui/core/Toolbar';
+import RedirectButton from './RedirectButton';
 
 
 class App extends Component {
@@ -15,7 +16,11 @@ class App extends Component {
     return (
       <div>
         <Navbar />
+        <div style={{textAlign: 'right'}}>
+          <RedirectButton />
+        </div>
         <Search />
+        
         <Toolbar >
             <b>Your Context</b>
         </Toolbar>
