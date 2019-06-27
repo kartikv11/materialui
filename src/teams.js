@@ -10,7 +10,7 @@ import TableBody from '@material-ui/core/TableBody'
 import TableCell from '@material-ui/core/TableCell'
 import TableHead from '@material-ui/core/TableHead'
 import TableRow from '@material-ui/core/TableRow'
-
+import Navbar from './Navbar';
 class MyForm extends React.Component {
   constructor() {
     super();
@@ -32,6 +32,8 @@ render(){
   return(
 
     <form onSubmit={this.handleSubmit}>
+
+
     <h1 align="center"> Data Creation Page</h1>
       <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '10vh'}}>
         <TextField
@@ -64,9 +66,11 @@ render(){
 
         </p>
       </div>
-      <div style={{ textAlign:'center' ,justifyContent:'center', alignItems:'center', width:'60%' }}>
+      <div style={{ textAlign:'center' ,justifyContent:'center', alignItems:'center', width:'100%' }}>
+      <div style={{ textAlign:'center' ,justifyContent:'center', alignItems:'center', width:'60%' ,margin:'0 20%'}}>
 
-      <Table  alignItems="center" border="2">
+      <Table  alignItems="center" border="2" >
+
       <TableHead>
 
           <TableRow >
@@ -214,18 +218,19 @@ render(){
       </Table>
 
 </div>
-<div style={{ textAlign:'center', justifyContent:'center', alignItems:'center' ,width:'60%'}}>
+</div>
+<div style={{ textAlign:'center', justifyContent:'center', alignItems:'center' ,width:'100%'}}>
+<div style={{ textAlign:'center' ,justifyContent:'center', alignItems:'center', width:'60%' ,margin:'0 20%'}}>
 <p>
 
 Outflow teams : Data/work To
 
 </p>
-      <Table  alignItems="center" border="2">
+
+      <Table   border="2">
       <TableHead>
 
           <TableRow>
-
-
 
             <TableCell align="right">
             <div style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
@@ -363,8 +368,9 @@ Outflow teams : Data/work To
 
         </TableRow>
 
-</TableBody>
+        </TableBody>
       </Table>
+      </div>
       </div>
       <div  style={{display: 'flex',  justifyContent:'center', alignItems:'center'}}>
         <Button variant="contained" color="primary" stype="submit" >
