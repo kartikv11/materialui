@@ -4,7 +4,7 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 
 import './index.css';
 import App from './App';
-import Teams from './teams';
+import MaterialUiForm from './teams';
 import * as serviceWorker from './serviceWorker';
 
 
@@ -12,7 +12,7 @@ const routing = (
   <Router>
     <div>
       <Route exact path="/" component={App} />
-    	<Route path="/teams" component={Teams} />
+    	<Route path="/teams" component={MaterialUiForm} />
     </div>
   </Router>
 );
