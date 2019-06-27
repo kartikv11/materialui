@@ -3,7 +3,9 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import MediaCardContainer from './MediaCardContainer';
+import Toolbar from '@material-ui/core/Toolbar';
 import Divider from '@material-ui/core/Divider';
+import ContextGraph from './contextGraph';
 import TextField from '@material-ui/core/TextField';
 import axios from 'axios';
 
@@ -36,7 +38,9 @@ class Search extends React.Component {
 
     this.state = {
       searchQuery: '',
-      results: []
+      results: [],
+      nodes: [],
+      edges: []
     }
 
     this.onSearchQueryChange = this.onSearchQueryChange.bind(this);
@@ -60,7 +64,11 @@ class Search extends React.Component {
 			}
 		}).then(res => {
         const results = res.data;
+        const nodes = res.data;
+        const edges = res.data;
         this.setState({ results: results.Global.teams });
+        this.setState({ nodes: results.Personal.nodes });
+        this.setState({ edges: results.Personal.edges });
       });
     /*Simulate AJAX call
     setTimeout(() => {
@@ -89,7 +97,7 @@ class Search extends React.Component {
 
   render() {
 
-    const {results, searchQuery} = this.state;
+    const {edges, nodes, results, searchQuery} = this.state;
 
     return(
     		<div>
@@ -99,6 +107,12 @@ class Search extends React.Component {
 		        search={this.onSearch}
 		      />
 		      <MediaCardContainer results={results} />
+		      <Toolbar >
+            <b>Your Context</b>
+	        </Toolbar>
+	        <Divider />
+	        <br/>
+	        <ContextGraph nodes={nodes} edges={edges}/>
         </div>
     )
   }

@@ -9,6 +9,7 @@
     "cytoscape-popper": "^1.0.4",
     "d3": "^5.9.4",
     "react": "^16.8.6",
+    "react-animated-text": "^0.1.4",
     "react-cytoscapejs": "^1.1.0",
     "react-d3-graph": "^2.1.0",
     "react-dom": "^16.8.6",

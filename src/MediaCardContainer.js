@@ -21,11 +21,10 @@ class MediaCardContainer extends React.Component {
     return (  
 	  	<div>
 				<Toolbar >
-		    	<b>JPMC Context</b>
+		    	<b>Firmwide Context</b>
 	      </Toolbar>
 	      <br/>
 	      <Divider />
-
 		      <div style={{display: 'flex', flexDirection: 'row'}}>
 		        {elements}
 	        </div>
