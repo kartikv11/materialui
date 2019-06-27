@@ -28,7 +28,7 @@ class ContextGraph extends React.Component {
       {
         selector: 'node',
         style: {
-          'background-color': '#666',
+          'background-color': '#c70011',
           'label': 'data(id)'
         }
       },
@@ -39,8 +39,9 @@ class ContextGraph extends React.Component {
           'width': 3,
           'length': 100,
           'line-color': '#ccc',
-          'target-arrow-color': '#ccc',
-          'target-arrow-shape': 'diamond',
+          'target-arrow-color': '#000000',
+          'target-arrow-shape': 'triangle',
+          'curve-style': 'bezier',
           'label': 'data(label)'
         }
       }
