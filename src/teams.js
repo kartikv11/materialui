@@ -30,8 +30,9 @@ class MyForm extends React.Component {
 
 render(){
   return(
-    
+
     <form onSubmit={this.handleSubmit}>
+    <h1 align="center"> Data Creation Page</h1>
       <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '10vh'}}>
         <TextField
           name="teamname"
@@ -62,13 +63,16 @@ render(){
         Inflow teams : Data/work From
 
         </p>
-      <Table >
+      </div>
+      <div style={{ textAlign:'center' ,justifyContent:'center', alignItems:'center', width:'60%' }}>
+
+      <Table  alignItems="center" border="2">
       <TableHead>
 
           <TableRow >
 
 
-            <TableCell align="right" size= "small">
+            <TableCell >
             <div style={{display: 'flex',  justifyContent:'center', alignItems:'center' }}>
               Team
               </div>
@@ -216,7 +220,7 @@ render(){
 Outflow teams : Data/work To
 
 </p>
-      <Table >
+      <Table  alignItems="center" border="2">
       <TableHead>
 
           <TableRow>
