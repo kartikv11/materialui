@@ -4,11 +4,13 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 
 import Navbar from './Navbar';
+import MyHeader from './header';
 import Search from './Search';
 import MediaCard from './Card';
 import Divider from '@material-ui/core/Divider';
 import Toolbar from '@material-ui/core/Toolbar';
 import RedirectButton from './RedirectButton';
+import ContextGraph from './contextGraph';
 
 
 class App extends Component {
@@ -26,8 +28,8 @@ class App extends Component {
         </Toolbar>
         <Divider />
         <br/>
-        <div >
-        </div>
+        <ContextGraph />
+
         <br/>
         <Toolbar >
             <b>JPMC Context</b>
